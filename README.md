@@ -29,3 +29,7 @@ Validar todos os endereços, fotos oficiais e contatos. O formulário não envia
 - Minuta de privacidade alinhada ao fluxo real do formulário.
 - Imagens fictícias não são apresentadas como fotos reais e os logotipos oficiais não foram alterados.
 - Prévia continua com noindex,nofollow até aprovação definitiva.
+
+
+## V4.2 — aplicação de imagens e navbar
+Cinco fotografias conceituais otimizadas em AVIF sem logotipos gerados foram integradas às páginas e à galeria interativa. O menu A Chroma ganhou chevron vetorial discreto. As imagens NÃO retratam a infraestrutura ou a equipe real da escola e contêm crédito de ilustração. Os logotipos oficiais e o código de e-mail não foram alterados nesta revisão.
