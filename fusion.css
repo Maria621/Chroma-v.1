@@ -4,7 +4,7 @@
 html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{overflow-x:hidden}
 body.fusion-home{color:var(--fusion-ink);background:#fff}
-body.fusion-home main{overflow:hidden}
+body.fusion-home main{overflow:clip}
 .fusion-home *, .fusion-home *::before,.fusion-home *::after{box-sizing:border-box}
 .fusion-home .container{max-width:var(--fusion-max)}
 .site-header.chroma-header-v31{position:fixed!important;z-index:900;top:0;left:0;right:0;background:rgba(6,29,63,.96);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.13);color:#fff;transition:background .2s}
