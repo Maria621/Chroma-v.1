@@ -4,24 +4,35 @@ on:
   push:
     branches:
       - revisao-institucional-v4
+      - main
   pull_request:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: read
 
+concurrency:
+  group: chroma-quality-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   validate:
+    name: Validate institutional site
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: "22"
-      - name: Check JavaScript syntax
-        run: npm run check:js
-      - name: Validate institutional pages and shared components
-        run: npm test
+      - name: Validate JavaScript, shared layout, pages and local assets
+        run: npm run validate
+      - name: Prevent indexing of review previews
+        if: github.ref == 'refs/heads/revisao-institucional-v4'
+        run: npm run check:preview

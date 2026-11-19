@@ -165,3 +165,11 @@ Este fluxo **não altera a renderização em tempo de execução**. Os arquivos 
 - Configuração de e-mail, segurança do endpoint e política de privacidade (última etapa do projeto).
 
 Não publicar como site definitivo antes da validação das pendências acima. O branch continua com `noindex,nofollow`.
+
+## Etapa 1 — Estabilização do fluxo de publicação (V5.0.1)
+
+- Backup do baseline V5.0: `backup-v5-0-estabilizacao-20261119`.
+- Qualidade: `npm run validate`, `npm run check:preview` e GitHub Actions em revisão e `main`.
+- Gate explícito de commit/deploy: `npm run verify:deployment` exige dados obtidos do Vercel e não aprova a prévia se o SHA divergir.
+- `RELEASE_PROTOCOL.md`: estado verificado da publicação, checklist de homologação e procedimento de reversão.
+- Nenhuma alteração na versão de produção; a publicação Vercel depende de cota/limite de build e validação da URL.
