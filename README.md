@@ -42,3 +42,14 @@ Cinco fotografias conceituais otimizadas em AVIF sem logotipos gerados foram int
 - Menu A Chroma com estado de abertura explícito: clique, segundo clique para fechar, Escape e clique fora.
 - Contadores visuais 01/07, 01/04 e 01/03 retirados das áreas de banner e galeria; sequência de etapas pedagógicas preservada.
 - Arquivos oficiais do logotipo não modificados.
+
+## Acabamento editorial e funcional — V4.4
+- Hero fotográfico ocupa todo o banner, com ajuste de proporção, gradiente e tipografia em telas diferentes.
+- A faixa animada contém duas cópias idênticas do mesmo texto para loop contínuo; respeita a preferência por movimento reduzido.
+- Missão, visão e valores em três colunas no desktop e uma coluna no celular.
+- Removidos: manifesto repetitivo, etiquetas decorativas, quadro comprimido de bolsas, formulário duplicado da página inicial, links de exploração redundantes e carrossel abstrato de Experiência.
+- Metodologia na home segue as quatro etapas reais descritas na página de Metodologia.
+- Experiência na home apresenta programação, games, empreendedorismo e Nexus, sem setas ou botões decorativos.
+- Galeria órfã da página Estrutura removida; galeria principal usa controle de foco e navegação por teclado.
+- Os links “Voltar ao topo” das páginas internas agora apontam para o cabeçalho da página atual.
+- Preservadas as páginas de Parcerias, imagens e logotipos oficiais, política de não indexação da prévia, backend e configuração futura de e-mail.
