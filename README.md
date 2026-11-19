@@ -53,3 +53,10 @@ Cinco fotografias conceituais otimizadas em AVIF sem logotipos gerados foram int
 - Galeria órfã da página Estrutura removida; galeria principal usa controle de foco e navegação por teclado.
 - Os links “Voltar ao topo” das páginas internas agora apontam para o cabeçalho da página atual.
 - Preservadas as páginas de Parcerias, imagens e logotipos oficiais, política de não indexação da prévia, backend e configuração futura de e-mail.
+
+
+## V4.5 — Footer compacto
+- Redução de altura e respiros em todas as páginas; logo oficial, navegação principal e contatos preservados.
+- Links de navegação em grade com duas colunas; aviso de prévia e política de privacidade preservados.
+- Layout adaptativo para desktop, tablet e celular.
+- Sem alterações em e-mail, backend ou logotipos.
