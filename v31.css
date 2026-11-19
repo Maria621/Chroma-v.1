@@ -1953,3 +1953,291 @@
   outline: 3px solid #1768bb;
   outline-offset: 2px;
 }
+/**
+ * Homepage / Hero — V5.3
+ * Fonte: src/styles/refinements/06-home-hero.css.
+ * Preserva a identidade azul e a imagem conceitual da versão aprovada.
+ * O hero agora evita imagens em cover e tamanhos forçados pelo legado.
+ */
+.hero#inicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  isolation: isolate;
+  min-height: clamp(600px, 72svh, 760px);
+  height: auto;
+  padding-block: clamp(120px, 12vw, 160px) clamp(92px, 8vw, 118px);
+  background: linear-gradient(114deg, #061c43 0%, #082c62 64%, #0a326d 100%);
+}
+
+.hero#inicio::before {
+  background: radial-gradient(circle at 78% 46%, rgba(62, 130, 231, .17), transparent 37%);
+  pointer-events: none;
+}
+
+.hero#inicio .hero-photo {
+  position: absolute;
+  inset: auto !important;
+  top: 50% !important;
+  right: clamp(24px, 4vw, 88px) !important;
+  left: auto !important;
+  bottom: auto !important;
+  width: min(45vw, 650px) !important;
+  height: auto !important;
+  aspect-ratio: 1100 / 619;
+  transform: translateY(-50%);
+  opacity: 1 !important;
+  overflow: hidden;
+  background: #0b326c;
+  border: 1px solid rgba(180, 214, 255, .14);
+  border-radius: 10px;
+  box-shadow: 0 25px 80px rgba(2, 18, 42, .28);
+}
+
+.hero#inicio .hero-photo .photograph {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  filter: saturate(.98) contrast(1.02);
+}
+
+.hero#inicio .hero-photo-overlay {
+  background:
+    linear-gradient(90deg, rgba(3, 25, 59, .32), transparent 42%),
+    linear-gradient(0deg, rgba(3, 21, 50, .30), transparent 32%) !important;
+}
+
+.hero#inicio .hero-content {
+  width: min(1260px, calc(100% - 96px));
+  padding-top: 0;
+  margin-inline: auto;
+}
+
+.hero#inicio h1 {
+  max-width: min(610px, 45vw);
+  font-size: clamp(43px, 4.45vw, 66px);
+  line-height: 1.11;
+  letter-spacing: -.052em;
+  margin: 23px 0 27px;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+  text-shadow: 0 4px 28px rgba(1, 19, 48, .42);
+}
+
+.hero#inicio .hero-bottom {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero#inicio .hero-bottom p {
+  max-width: 500px;
+  font-size: clamp(14px, 1.12vw, 16px);
+  line-height: 1.7;
+  color: #f0f6ff;
+  margin: 0;
+}
+
+.hero#inicio .hero-topline {
+  top: 96px;
+  right: clamp(24px, 4vw, 88px);
+}
+
+.hero#inicio .hero-footer {
+  bottom: 23px;
+}
+
+.hero#inicio .v5-hero-credit {
+  bottom: 12px;
+  right: 14px;
+  font-size: 10px;
+  line-height: 1.4;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, .7);
+}
+
+.hero#inicio .hero-atmosphere,
+.hero#inicio .hero-noise {
+  pointer-events: none;
+}
+
+@media (max-width: 1080px) and (min-width: 901px) {
+  .hero#inicio .hero-content {
+    width: calc(100% - 72px);
+  }
+
+  .hero#inicio h1 {
+    max-width: 46vw;
+    font-size: clamp(41px, 5vw, 59px);
+  }
+
+  .hero#inicio .hero-photo {
+    width: 45vw !important;
+    right: 24px !important;
+  }
+
+  .hero#inicio .hero-bottom p {
+    max-width: 44vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero#inicio {
+    display: flex;
+    justify-content: flex-start;
+    min-height: 0;
+    height: auto;
+    padding: 115px 0 25px;
+  }
+
+  .hero#inicio .hero-topline {
+    top: 82px;
+    left: 30px;
+    right: 30px;
+    font-size: 9px;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .hero#inicio .hero-content {
+    order: 1;
+    width: calc(100% - 60px);
+    margin: 0 auto;
+    padding: 18px 0 0;
+  }
+
+  .hero#inicio h1 {
+    max-width: 740px;
+    font-size: clamp(43px, 6.7vw, 64px);
+    line-height: 1.12;
+    margin: 24px 0 23px;
+  }
+
+  .hero#inicio .hero-bottom {
+    gap: 22px;
+  }
+
+  .hero#inicio .hero-bottom p {
+    max-width: 610px;
+    font-size: 15px;
+  }
+
+  .hero#inicio .hero-photo {
+    order: 2;
+    position: relative;
+    inset: auto !important;
+    width: calc(100% - 60px) !important;
+    height: auto !important;
+    aspect-ratio: 1100 / 619;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none;
+    margin: 36px auto 25px;
+  }
+
+  .hero#inicio .hero-photo .photograph {
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .hero#inicio .hero-footer {
+    order: 3;
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    width: calc(100% - 60px);
+    margin: 0 auto;
+    padding: 16px 0 0;
+    border-top: 1px solid rgba(218, 233, 255, .18);
+  }
+
+  .hero#inicio .hero-atmosphere {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero#inicio {
+    padding-top: 110px;
+    padding-bottom: 21px;
+  }
+
+  .hero#inicio .hero-topline {
+    top: 79px;
+    left: 21px;
+    right: 21px;
+    font-size: 8px;
+    letter-spacing: .12em;
+  }
+
+  .hero#inicio .hero-content {
+    width: calc(100% - 42px);
+    padding-top: 14px;
+  }
+
+  .hero#inicio .eyebrow {
+    max-width: 100%;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: .095em;
+  }
+
+  .hero#inicio h1 {
+    font-size: clamp(35px, 9.15vw, 50px);
+    line-height: 1.13;
+    letter-spacing: -.049em;
+    max-width: 100%;
+    margin: 19px 0 19px;
+  }
+
+  .hero#inicio h1 > span {
+    display: block;
+  }
+
+  .hero#inicio .hero-bottom p {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.68;
+  }
+
+  .hero#inicio .hero-photo {
+    width: calc(100% - 42px) !important;
+    margin: 27px auto 21px;
+    border-radius: 8px;
+  }
+
+  .hero#inicio .hero-footer {
+    width: calc(100% - 42px);
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    flex-wrap: wrap;
+    line-height: 1.7;
+    font-size: 9px;
+  }
+
+  .hero#inicio .v5-hero-credit {
+    right: 9px;
+    bottom: 7px;
+    font-size: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero#inicio *,
+  .hero#inicio *::before,
+  .hero#inicio *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

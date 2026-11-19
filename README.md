@@ -189,3 +189,11 @@ Não publicar como site definitivo antes da validação das pendências acima. O
 - Gerador sem dependências externas: `npm run build:assets` e verificador `npm run check:assets`.
 - `npm run validate` passa a impedir divergência entre código-fonte e arquivos compilados, além dos testes existentes.
 - O serviço de contato e o conteúdo institucional permanecem intocados; conferir `ARCHITECTURE.md` antes de editar os arquivos.
+
+## Etapa 4 — Homepage e Hero V5.3
+
+- Novo componente fonte `src/styles/refinements/06-home-hero.css` com proporção da imagem preservada, hero mais contido e responsividade de 900/600 px.
+- `v31.css` foi regenerado com as regras do hero, seguindo a arquitetura modular da Etapa 3.
+- `npm run check:hero` verifica imagem, CTA, rótulo ilustrativo, tamanho e regras responsivas; incorporado a `npm run validate`.
+- `HERO_REVIEW.md` apresenta a matriz de testes visuais pendentes para a prévia do commit.
+- Demais páginas e conteúdos preservados; a versão de produção não deve ser alterada.

@@ -32,6 +32,7 @@ const sources = {
     "src/styles/refinements/03-partnerships-hero.css",
     "src/styles/refinements/04-footer.css",
     "src/styles/refinements/05-units-accessibility.css",
+    "src/styles/refinements/06-home-hero.css",
   ],
   "app.js": [
     "src/scripts/header.js",
