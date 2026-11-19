@@ -24,48 +24,23 @@ const mnav=modal?.querySelectorAll('.modal-bottom button');if(mnav?.length===2){
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){galleryClose()}if(modal?.style.display==='grid'){if(e.key==='ArrowLeft')galleryStep(-1);if(e.key==='ArrowRight')galleryStep(1)}});
 })();
 (()=>{'use strict';
-const destination=(window.CHROMA_EMAIL_OFICIAL||'').trim(); // Configurar somente com e-mail confirmado.
-const query=new URLSearchParams(window.__chromaRouteQuery || location.search);
-let chosenUnit=query.get('unidade');
-if(chosenUnit){document.querySelectorAll('select[name="unidade"]').forEach(s=>{let option=[...s.options].find(o=>o.value===chosenUnit);if(option)s.value=option.value;});}
-function setStatus(form,message,error){const node=form.querySelector('.v3-form-notice');if(node){node.textContent=message;node.classList.toggle('is-error',!!error);}}
-function toMailto(data){const subject='Contato pelo site Chroma — '+(data.get('assunto')||'Solicitação de retorno')+' / '+(data.get('unidade')||'Unidade não informada');
- const body=[
-  'Olá, equipe Chroma!', '',
-  'Contato preenchido pelo site institucional:',
-  'Nome: '+(data.get('nome')||''),
-  'E-mail: '+(data.get('email')||''),
-  'Telefone: '+(data.get('telefone')||'Não informado'),
-  'Unidade de interesse: '+(data.get('unidade')||'Não informado'),
-  'Perfil: '+(data.get('perfil')||'Não informado'),
-  'Assunto: '+(data.get('assunto')||'Solicitação de retorno'),
-  'Mensagem: '+(data.get('mensagem')||'Gostaria de receber mais informações sobre a Escola Chroma.'),'',
-  'Esta mensagem foi preparada pelo formulário e precisa ser enviada pelo usuário.'
- ].join('\n');
- return 'mailto:'+encodeURIComponent(destination)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-}
-for(const form of document.querySelectorAll('[data-chroma-form]')){
- form.addEventListener('submit',async e=>{
-   e.preventDefault();
-   if(!form.checkValidity()){form.reportValidity();setStatus(form,'Confira os campos obrigatórios antes de continuar.',true);return;}
-   const data=new FormData(form);
-   if(data.get('website'))return;
-   const btn=form.querySelector('button[type="submit"]');const label=btn?.innerHTML;
-   const payload=Object.fromEntries(data.entries());delete payload.website;
-   const preview=location.protocol==='file:' || location.origin==='null' || window.parent!==window || !location.pathname.startsWith('/');
-   // Client preview always opens user email; the browser never asserts delivery.
-   if(!preview){
-      try{
-       btn.disabled=true;btn.textContent='Enviando...';
-       const response=await fetch('/api/contato',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
-       const body=await response.json().catch(()=>({}));
-       if(response.ok && body.ok){setStatus(form,'Mensagem enviada à equipe com sucesso. Confira sua caixa de entrada para eventual resposta.',false);form.reset();return;}
-       setStatus(form,'O envio automático não está configurado. Abriremos uma mensagem para você revisar e enviar.',true);
-      }catch(_err){setStatus(form,'Não foi possível enviar automaticamente. Abriremos seu aplicativo de e-mail.',true)}
-      finally{btn.disabled=false;btn.innerHTML=label}
-   }else{setStatus(form,'Sua mensagem está pronta. Confira-a no aplicativo de e-mail e clique em Enviar. O site ainda não recebeu seus dados.',false)}
-   if(!destination){setStatus(form,'O envio depende da confirmação do e-mail institucional. Nenhuma mensagem foi enviada.',true);return;}
-   window.location.href=toMailto(data);
- });
-}
+const q=new URLSearchParams(window.__chromaRouteQuery || location.search);
+for(const n of ['unidade','assunto']){const v=q.get(n);if(!v)continue;document.querySelectorAll('select[name="'+n+'"]').forEach(s=>{const o=[...s.options].find(x=>x.value===v);if(o)s.value=o.value;});}
+const forms=[...document.querySelectorAll('[data-chroma-form]')];
+function status(f,msg,bad){const e=f.querySelector('.v3-form-notice');if(e){e.textContent=msg;e.classList.toggle('is-error',!!bad);}}
+function availability(ready){for(const f of forms){f.dataset.sendReady=ready?'true':'false';const b=f.querySelector('button[type="submit"]');if(b)b.disabled=!ready;status(f,ready?'Envio disponível. A mensagem será encaminhada após a confirmação.':'Formulário em configuração nesta prévia. Nenhuma mensagem será enviada por aqui; use o Instagram institucional.',!ready);}}
+async function check(){if(!forms.length)return;if(!/^https?:$/.test(location.protocol)){availability(false);return;}try{const r=await fetch('/api/contato',{method:'GET',cache:'no-store'});const data=await r.json();availability(r.ok&&data.acceptingMessages===true);}catch{availability(false);}}
+check();
+for(const f of forms){f.addEventListener('submit',async ev=>{ev.preventDefault();
+if(f.dataset.sendReady!=='true'){status(f,'Envio indisponível. Utilize o Instagram institucional.',true);return;}
+if(!f.checkValidity()){f.reportValidity();status(f,'Revise os campos obrigatórios.',true);return;}
+const d=new FormData(f);if(d.get('website'))return;const payload=Object.fromEntries(d.entries());delete payload.website;
+const btn=f.querySelector('button[type="submit"]'),before=btn?.innerHTML;
+try{if(btn){btn.disabled=true;btn.textContent='Enviando…';}
+const r=await fetch('/api/contato',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+const result=await r.json().catch(()=>({}));if(!r.ok||result.ok!==true)throw Error('not sent');
+status(f,'Mensagem enviada. A equipe poderá responder pelo contato informado.',false);f.reset();
+}catch{status(f,'Não foi possível confirmar o envio. Tente novamente ou utilize o Instagram institucional.',true);}
+finally{if(btn){btn.disabled=false;btn.innerHTML=before;}}
+});}
 })();

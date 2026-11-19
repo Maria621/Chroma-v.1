@@ -19,3 +19,13 @@ Validar todos os endereços, fotos oficiais e contatos. O formulário não envia
 - Todos os arquivos oficiais de logotipo foram preservados sem alterações.
 - Imagens geradas por IA foram preparadas separadamente, mas NÃO incluídas no repositório até revisão. Não retratam instalações reais.
 - Site segue noindex até validação, LGPD, fotografia oficial e testes do formulário.
+
+
+## Revisão V4.1
+- Diferença corrigida entre Aluno Nota 10 (avaliação e bolsas) e Presença Premiada (frequência).
+- FAQ esclarece bolsas e necessidade do regulamento.
+- Metodologia tecnológica detalhada conforme aula inaugural 2026.
+- Disponibilidade do envio consultada por GET em /api/contato; formulário fica indisponível quando faltam variáveis de e-mail.
+- Minuta de privacidade alinhada ao fluxo real do formulário.
+- Imagens fictícias não são apresentadas como fotos reais e os logotipos oficiais não foram alterados.
+- Prévia continua com noindex,nofollow até aprovação definitiva.
