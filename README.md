@@ -33,3 +33,12 @@ Validar todos os endereços, fotos oficiais e contatos. O formulário não envia
 
 ## V4.2 — aplicação de imagens e navbar
 Cinco fotografias conceituais otimizadas em AVIF sem logotipos gerados foram integradas às páginas e à galeria interativa. O menu A Chroma ganhou chevron vetorial discreto. As imagens NÃO retratam a infraestrutura ou a equipe real da escola e contêm crédito de ilustração. Os logotipos oficiais e o código de e-mail não foram alterados nesta revisão.
+
+
+## Revisão V4.3
+- Página de parcerias institucionais com caminhos distintos para escolas e empresas.
+- Chamadas de parceria na home, navegação desktop/mobile, rodapé e contato.
+- Formulário recebe perfis e assuntos específicos, pré-selecionados por URL; e-mail continua sem configuração.
+- Menu A Chroma com estado de abertura explícito: clique, segundo clique para fechar, Escape e clique fora.
+- Contadores visuais 01/07, 01/04 e 01/03 retirados das áreas de banner e galeria; sequência de etapas pedagógicas preservada.
+- Arquivos oficiais do logotipo não modificados.
