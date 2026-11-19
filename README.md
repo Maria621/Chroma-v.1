@@ -82,3 +82,28 @@ Cinco fotografias conceituais otimizadas em AVIF sem logotipos gerados foram int
 - Contato recebeu simplificação: retirada de duas chamadas redundantes de retorno ao início, mantendo o formulário (envio de e-mail ainda pendente), alternativas e rodapé.
 - Ajustes responsivos e de quebra de títulos, nomes das unidades, etapas da metodologia e marcos históricos para reduzir risco de texto cortado.
 - Fotos reais ainda não estão disponíveis entre os ativos do repositório. Imagens conceituais continuam identificadas como tais; nenhuma foto real foi fabricada ou usada sem confirmação.
+
+## Padrão de organização do código — revisão V4.8
+
+A revisão V4.8 corrigiu arquivos que concentravam centenas de tags ou declarações em linhas únicas.
+
+### Estrutura existente
+- `*.html`: páginas institucionais independentes, com elementos `head`, `header`, `main` e `footer` explicitamente estruturados.
+- `style.css`: folha de estilos base e componentes legados.
+- `v31.css`: refinamentos responsivos e visuais das versões subsequentes; alterações futuras devem evitar novas sobreposições desnecessárias.
+- `app.js`: interações de conteúdo, galeria e disponibilidade do formulário.
+- `v31.js`: navegação desktop/mobile e ampliação de artes.
+- `api/contato.js`: API de contato, sem configuração de envio enquanto e-mail, antispam e privacidade não forem homologados.
+- `assets/`: imagens e logotipos preservados.
+
+### Convenções
+- Usar **2 espaços** por nível de indentação, UTF-8 e fim de linha LF.
+- Manter um bloco HTML por linha, com aninhamento legível, sem minificar o código-fonte.
+- Escrever regras CSS em blocos com propriedades em linhas separadas e respeitar as consultas responsivas existentes.
+- Organizar comandos JavaScript, callbacks e funções com quebras de linha; priorizar funções pequenas e nomeadas em futuras revisões.
+- Evitar CSS inline e não duplicar blocos de navegação ou rodapé em futuras alterações sem um plano de migração para componentes compartilhados.
+- Não alterar ativos reais, regulamentos, endereços ou informações institucionais apenas para facilitar formatação.
+- Antes de publicar: conferir links internos, `id`s, JS, responsividade, contraste, formulário e deployment por commit.
+
+### Escopo e limites da V4.8
+Esta revisão foi **de formatação**, sem introduzir framework, pipeline de build, componentes novos, alteração de conteúdo ou configuração de e-mail. A consolidação arquitetural do CSS legado e a extração de componentes HTML compartilhados continuam como melhorias futuras e exigem testes visuais completos.
