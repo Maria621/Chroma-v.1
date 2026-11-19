@@ -82,6 +82,9 @@ for (const page of pages) {
     if (!a.has("alt")) {
       issues.push(page + ": image without alt attribute");
     }
+    if (a.has("src") && (!a.has("width") || !a.has("height"))) {
+      issues.push(page + ": static image missing intrinsic dimensions: " + a.get("src"));
+    }
     if (a.get("src") === "") {
       issues.push(page + ": image with empty src");
     }
@@ -140,12 +143,26 @@ for (const cssFile of ["style.css", "v31.css"]) {
   if (open !== close) {
     issues.push(cssFile + ": unbalanced rule brackets (" + open + "/" + close + ")");
   }
+  if (/data:image\/(?:webp|png|jpe?g);base64,[A-Za-z0-9+/=]{1000,}/.test(source)) {
+    issues.push(cssFile + ": large inline raster image must be an external asset");
+  }
+  if (cssFile === "style.css" && source.length > 130000) {
+    issues.push("style.css: exceeded the 130 KB source-size budget");
+  }
+  for (const match of source.matchAll(/url\(\s*["\']?(assets\/[^"\')]+)["\']?\s*\)/g)) {
+    if (!existsSync(path.join(projectRoot, match[1]))) {
+      issues.push(cssFile + ": missing background asset " + match[1]);
+    }
+  }
   const important = count(source, /!important\b/g);
   if (important) {
     warnings.push(cssFile + ": " + important + " !important declarations to review");
   }
 }
 
+if (count(pageContents.get("index.html"), /<section\b/g) > 10) {
+  issues.push("index.html: homepage has more than ten major sections");
+}
 for (const page of ["index.html", "metodologia.html"]) {
   const source = pageContents.get(page);
   if (count(source, /<button\b[^>]*class="method-step(?:\s|")/g) !== 5) {

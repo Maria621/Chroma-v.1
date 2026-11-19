@@ -147,3 +147,21 @@ Este fluxo **não altera a renderização em tempo de execução**. Os arquivos 
 - Consolidação gradual de \`style.css\` e \`v31.css\`, que ainda contêm regras históricas e sobreposições.
 - Fotografias institucionais reais, endereços e informações oficiais pendentes.
 - E-mail, tratamento de dados e política de privacidade definitiva (deixar para a última etapa).
+
+## Revisão V5.0 — arquitetura CSS, UX e qualidade visual
+
+- A imagem WebP que estava embutida como **153 mil caracteres Base64** em `style.css` foi extraída para `assets/interior-hero.webp`. A referência CSS continua apontando para o mesmo conteúdo visual, agora como recurso independente e armazenável em cache.
+- `style.css` foi reduzido de aproximadamente 252,7 mil para 99,7 mil caracteres, sem remover os componentes utilizados nas páginas internas.
+- A home foi reduzida de **12 para 10 seções**: a seção “Pessoas” repetia acompanhamento individual já explicado na metodologia e em Nossa Escola; a seção final de contato repetia chamadas disponíveis na navegação, no rodapé e na página Contato.
+- O título principal foi encurtado e a altura do hero limitada para reduzir excesso de rolagem, preservando a composição azul e a fotografia conceitual identificada como ilustrativa.
+- Foram adicionadas as dimensões intrínsecas das imagens AVIF/WebP já existentes nas páginas HTML. Isso permite que o navegador reserve proporção e reduz potenciais deslocamentos de layout.
+- O ritmo vertical da home foi suavizado por ajustes nos espaçamentos base e da seção Novidades, sem alterar o conteúdo das demais páginas.
+- O QA foi estendido para rejeitar imagens estáticas sem dimensões, arquivos CSS com raster Base64 extenso, recursos locais de CSS ausentes e regressões no número de seções da home.
+
+### Critérios ainda não homologados
+- Teste visual real em desktop, tablet e celular e avaliação de Core Web Vitals/Lighthouse.
+- Substituição de imagens ilustrativas por **fotografias reais autorizadas** das unidades e atividades, que ainda não constam como recursos verificáveis no repositório.
+- Confirmação de endereços, horários, história de unidades adicionais e regulamento oficial de bolsas.
+- Configuração de e-mail, segurança do endpoint e política de privacidade (última etapa do projeto).
+
+Não publicar como site definitivo antes da validação das pendências acima. O branch continua com `noindex,nofollow`.

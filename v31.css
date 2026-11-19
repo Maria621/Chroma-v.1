@@ -1220,9 +1220,9 @@
 /* V4.4: hierarchy, functional composition, no duplicated carousels */
 .hero {
   isolation:isolate;
-  min-height:max(690px,88svh);
+  min-height:clamp(630px,78svh,820px);
   height:auto;
-  padding-block:95px 75px
+  padding-block:88px 72px
 }
 .hero .hero-photo {
   position:absolute;
@@ -1252,8 +1252,8 @@
 }
 .hero h1 {
   max-width:850px;
-  font-size:clamp(48px,6vw,96px);
-  line-height:1.07;
+  font-size:clamp(45px,5.7vw,88px);
+  line-height:1.08;
   letter-spacing:-.065em;
   margin:30px 0
 }
@@ -1419,15 +1419,15 @@
 }
 @media(max-width:760px) {
   .hero {
-    min-height:720px;
-    padding-block:100px 90px
+    min-height:clamp(620px,82svh,720px);
+    padding-block:88px 72px
   }
   .hero .hero-content {
     width:calc(100% - 42px);
     padding-top:70px
   }
   .hero h1 {
-    font-size:clamp(40px,9.2vw,60px);
+    font-size:clamp(38px,9vw,57px);
     max-width:95%;
     margin:26px 0
   }
@@ -1623,7 +1623,7 @@
     display:grid;
     grid-template-columns:1fr auto;
     gap:8px 12px;
-    font-size:10px
+    font-size:12px
   }
   .footer-compact .footer-bottom a:last-child {
     grid-column:1/-1
