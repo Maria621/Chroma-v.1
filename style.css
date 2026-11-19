@@ -1,14 +1,3 @@
-:root {
-  --navy:#081b38;
-  --ink:#142139;
-  --blue:#1458bc;
-  --electric:#3d8bff;
-  --ice:#f5f8fc;
-  --soft:#eaf0f7;
-  --line:#dae2eb;
-  --sans:'Manrope',Arial,sans-serif;
-  --body:'DM Sans',Arial,sans-serif
-}
 * {
   box-sizing:border-box
 }
@@ -20,7 +9,7 @@ body {
   margin:0;
   background:#fff;
   color:var(--ink);
-  font-family:var(--body);
+  font-family:var(--font-body);
   -webkit-font-smoothing:antialiased
 }
 body.nav-locked {
@@ -45,24 +34,24 @@ button:focus-visible,a:focus-visible {
   outline-offset:5px
 }
 .container {
-  width:min(100% - 96px,1360px);
+  width:min(100% - var(--container-gutter),var(--container-max));
   margin-inline:auto
 }
 h1,h2,h3,p {
   margin-top:0
 }
 h1,h2,h3 {
-  font-family:var(--sans);
-  letter-spacing:-.065em
+  font-family:var(--font-heading);
+  letter-spacing:var(--tracking-heading)
 }
 h2 {
   font-weight:700
 }
 p {
-  line-height:1.8
+  line-height:var(--leading-body)
 }
 .section-space {
-  padding:clamp(80px,8.8vw,120px) 0
+  padding:var(--space-section) 0
 }
 .skip-link {
   position:fixed;
@@ -2089,10 +2078,6 @@ p {
   height:100%
 }
 /* CHROMA SIGNATURE / direção institucional validada com os ativos recebidos. */
-:root {
-  --chroma-yellow:#ffda10;
-  --chroma-deep:#052f68
-}
 .brand-official-image {
   height:auto;
   max-width:236px;
@@ -2432,7 +2417,7 @@ p {
   z-index:-1
 }
 .v2-inner-content {
-  width:min(100% - 96px,1360px)
+  width:min(100% - var(--container-gutter),var(--container-max))
 }
 .v2-inner-meta {
   display:flex;
@@ -3467,9 +3452,6 @@ p {
   display:none!important
 }
 /* CHROMA — multipáginas sem perder o sistema visual original */
-:root {
-  --chroma-yellow:#ffdb23
-}
 .site-header {
   z-index:200
 }
@@ -4271,10 +4253,6 @@ p {
   }
 }
 /* CHROMA V3 — Brand-consistent additions (units / editorial news / contact) */
-:root {
-  --chroma-yellow:#ffe025;
-  --chroma-royal:#1454af
-}
 .desktop-nav {
   gap:clamp(12px,1.25vw,23px);
   margin-left:12px

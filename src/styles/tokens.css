@@ -1,0 +1,61 @@
+/**
+ * Instituto Chroma — sistema de tokens.
+ * Fonte única de tipografia, cores e escalas essenciais.
+ * Valores consolidados da V5.0: manter a composição aprovada.
+ * Os arquivos style.css e v31.css continuam responsáveis pelos componentes.
+ */
+:root {
+  /* Tipografia institucional */
+  --font-heading: 'Manrope', Arial, sans-serif;
+  --font-body: 'DM Sans', Arial, sans-serif;
+  --sans: var(--font-heading);
+  --body: var(--font-body);
+  --tracking-heading: -.065em;
+  --leading-body: 1.8;
+
+  /* Paleta original e aliases semânticos */
+  --color-brand-navy: #081b38;
+  --color-brand-primary: #1458bc;
+  --color-brand-electric: #3d8bff;
+  --color-brand-deep: #052f68;
+  --color-brand-royal: #1454af;
+  --color-brand-accent: #ffe025;
+  --color-ink: #142139;
+  --color-surface: #fff;
+  --color-surface-soft: #f5f8fc;
+  --color-surface-subtle: #eaf0f7;
+  --color-border: #dae2eb;
+  --color-focus: #ffe33a;
+
+  /* Compatibilidade com componentes legados */
+  --navy: var(--color-brand-navy);
+  --ink: var(--color-ink);
+  --blue: var(--color-brand-primary);
+  --electric: var(--color-brand-electric);
+  --ice: var(--color-surface-soft);
+  --soft: var(--color-surface-subtle);
+  --line: var(--color-border);
+  --chroma-deep: var(--color-brand-deep);
+  --chroma-royal: var(--color-brand-royal);
+  --chroma-yellow: var(--color-brand-accent);
+  --chroma-focus: var(--color-focus);
+
+  /* Dimensões e ritmo vertical */
+  --container-max: 1360px;
+  --container-gutter: 96px;
+  --space-section: clamp(80px, 8.8vw, 120px);
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Componentes: referência para migração progressiva */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-pill: 999px;
+  --focus-ring-size: 3px;
+}

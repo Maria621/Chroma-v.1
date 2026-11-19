@@ -173,3 +173,11 @@ Não publicar como site definitivo antes da validação das pendências acima. O
 - Gate explícito de commit/deploy: `npm run verify:deployment` exige dados obtidos do Vercel e não aprova a prévia se o SHA divergir.
 - `RELEASE_PROTOCOL.md`: estado verificado da publicação, checklist de homologação e procedimento de reversão.
 - Nenhuma alteração na versão de produção; a publicação Vercel depende de cota/limite de build e validação da URL.
+
+## Etapa 2 — Tipografia e Design System V5.1
+
+- Cinco blocos globais `:root` foram consolidados em `src/styles/tokens.css`, preservando as cores e o layout existentes.
+- As 12 páginas agora referenciam Manrope e DM Sans por uma única folha Google Fonts, com fallback Arial e `display=swap`.
+- `DESIGN_SYSTEM.md` registra tipografia, paleta, escalas e a necessidade de revisão de privacidade antes de publicar.
+- `npm run check:design` valida a configuração e faz parte de `npm run validate`.
+- A disponibilidade das fontes externas e o resultado visual precisam ser validados em navegador na prévia correspondente ao commit.

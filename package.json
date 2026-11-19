@@ -1,6 +1,6 @@
 {
   "name": "instituto-chroma-institucional",
-  "version": "5.0.1",
+  "version": "5.1.0",
   "private": true,
   "description": "Site institucional multipágina do Instituto Chroma, com validação estática e layouts compartilhados.",
   "engines": {
@@ -12,8 +12,9 @@
     "check:layout": "node scripts/sync-layout.mjs --check",
     "sync:layout": "node scripts/sync-layout.mjs --write",
     "check:js": "node --check app.js && node --check v31.js && node --check api/contato.js",
-    "validate": "npm run check:js && npm run check:layout && npm test",
+    "validate": "npm run check:js && npm run check:layout && npm run check:design && npm test",
     "check:preview": "node scripts/check-preview.mjs",
-    "verify:deployment": "node scripts/verify-deployment.mjs"
+    "verify:deployment": "node scripts/verify-deployment.mjs",
+    "check:design": "node scripts/check-design-system.mjs"
   }
 }
