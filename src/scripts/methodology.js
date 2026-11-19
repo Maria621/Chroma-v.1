@@ -11,5 +11,17 @@
       if(plus)plus.textContent=i===j?'−':'+'
     });
   }
-  methods.forEach((b,i)=>b.addEventListener('click',()=>selectMethod(i)));
+  methods.forEach((button,i) => {
+    button.addEventListener('click', () => selectMethod(i));
+    button.addEventListener('keydown', (event) => {
+      if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      const next = event.key === 'Home'
+        ? 0
+        : event.key === 'End'
+          ? methods.length - 1
+          : (i + (event.key === 'ArrowDown' ? 1 : -1) + methods.length) % methods.length;
+      methods[next]?.focus();
+    });
+  });
 })();

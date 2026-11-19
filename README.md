@@ -197,3 +197,13 @@ Não publicar como site definitivo antes da validação das pendências acima. O
 - `npm run check:hero` verifica imagem, CTA, rótulo ilustrativo, tamanho e regras responsivas; incorporado a `npm run validate`.
 - `HERO_REVIEW.md` apresenta a matriz de testes visuais pendentes para a prévia do commit.
 - Demais páginas e conteúdos preservados; a versão de produção não deve ser alterada.
+
+## Etapa 5 — Páginas internas e navegação V5.4
+
+- Retorno contextual à página inicial em 11 páginas internas, preservando a tipografia e os dois estilos de hero.
+- Menu institucional com semântica de painel expansível e navegação por teclado mais completa.
+- Rótulos específicos e devolução de foco ao fechar o modal de artes em Novidades.
+- Atividades da metodologia com navegação por teclado e ícones decorativos para leitores de tela.
+- Mensagem de contato alternativo na página de unidades enquanto o formulário não está disponível.
+- CSS no módulo `src/styles/refinements/07-inner-navigation.css`, gerado no bundle `v31.css`.
+- Testes adicionados: `npm run check:interior`. Consulte `INTERIOR_REVIEW.md`.

@@ -2241,3 +2241,79 @@
     transition-duration: .01ms !important;
   }
 }
+/**
+ * V5.4 — navegação contextual das páginas internas e orientação de unidades.
+ * Inserido após os refinamentos existentes para preservar a aparência aprovada.
+ */
+.page-inner-hero .page-eyebrow {
+  flex-wrap: wrap;
+  row-gap: 9px;
+}
+
+.page-inner-hero .page-eyebrow .page-return-home {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+  color: #d9eaff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  line-height: 1.5;
+  text-transform: none;
+  text-decoration: none;
+  text-underline-offset: 5px;
+  min-height: 32px;
+  white-space: nowrap;
+}
+
+.page-inner-hero.light .page-eyebrow .page-return-home {
+  color: #144a8b;
+}
+
+.page-inner-hero .page-eyebrow .page-return-home:hover {
+  text-decoration: underline;
+}
+
+.page-inner-hero .page-eyebrow .page-return-home:focus-visible {
+  outline: 3px solid var(--chroma-focus, #ffe33a);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.page-inner-hero.light .page-eyebrow .page-return-home:focus-visible {
+  outline-color: #1458bc;
+}
+
+.v3-units-bottom .units-contact-guidance {
+  max-width: 540px;
+  margin: 15px 0 0;
+  color: #526882;
+  font-size: 14px;
+  line-height: 1.65;
+  letter-spacing: normal;
+}
+
+.v3-units-bottom .units-contact-guidance a {
+  color: #1458bc;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 670px) {
+  .page-inner-hero .page-eyebrow {
+    align-items: flex-start;
+    column-gap: 16px;
+  }
+
+  .page-inner-hero .page-eyebrow .page-return-home {
+    font-size: 10px;
+    min-height: 28px;
+  }
+
+  .v3-units-bottom .units-contact-guidance {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+}

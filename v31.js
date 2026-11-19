@@ -17,6 +17,7 @@
     if(focus)menu.focus()
   }
   function openMobile() {
+    setDropdown(false);
     panel.hidden=false;
     menu.setAttribute('aria-expanded','true');
     menu.setAttribute('aria-label','Fechar menu de navegação');
@@ -72,26 +73,51 @@
       closeDropdown();
       toggle.focus()
     }
-    else if(e.key==='ArrowDown'&&e.target===toggle) {
+    else if(['ArrowDown','ArrowUp','Home','End'].includes(e.key)) {
+      const links=[...dropdown.querySelectorAll('.nav-dropdown-panel a[href]')];
+      if(!links.length)return;
+      const current=links.indexOf(document.activeElement);
+      if(current<0&&e.target!==toggle)return;
       e.preventDefault();
       setDropdown(true);
-      dropdown.querySelector('a')?.focus()
+      let next=0;
+      if(e.key==='ArrowDown')next=(current+1)%links.length;
+      else if(e.key==='ArrowUp')next=(current-1+links.length)%links.length;
+      else if(e.key==='End')next=links.length-1;
+      links[next].focus();
     }
   });
 })();
-(()=> {
+(() => {
   'use strict';
-  const dialog=document.getElementById('chroma-image-dialog');
-  if(dialog) {
-    document.querySelectorAll('[data-view-image]').forEach(btn=>btn.addEventListener('click',()=> {
-      const img=dialog.querySelector('img');
-      img.src=btn.dataset.viewImage;
-      img.alt=btn.previousElementSibling?.alt||'Arte original da Chroma';
-      dialog.showModal()
-    }));
-    dialog.querySelector('[data-close-image]')?.addEventListener('click',()=>dialog.close());
-    dialog.addEventListener('click',e=> {
-      if(e.target===dialog)dialog.close()
-    })
-  }
+
+  const dialog = document.getElementById('chroma-image-dialog');
+  if (!dialog) return;
+
+  const image = dialog.querySelector('img[data-dynamic-image]');
+  const closeButton = dialog.querySelector('[data-close-image]');
+  let trigger = null;
+
+  document.querySelectorAll('[data-view-image]').forEach((button) => {
+    button.addEventListener('click', () => {
+      if (!image || dialog.open) return;
+
+      trigger = button;
+      image.src = button.dataset.viewImage;
+      image.alt = button.previousElementSibling?.alt || 'Arte original da Chroma';
+      dialog.showModal();
+      closeButton?.focus();
+    });
+  });
+
+  closeButton?.addEventListener('click', () => dialog.close());
+
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+
+  dialog.addEventListener('close', () => {
+    if (trigger?.isConnected) trigger.focus();
+    trigger = null;
+  });
 })();
