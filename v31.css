@@ -259,3 +259,44 @@
 .v7-community-note p{margin:0;max-width:860px;font-size:15px;line-height:1.75;color:#405a78}
 @media(max-width:960px){.v3-unit-strip.v7-unit-strip{grid-template-columns:1fr}.v7-unit-strip .v3-unit-strip-item{min-height:190px}.v7-location{grid-template-columns:1fr}}
 @media(max-width:700px){.v7-coverage-grid{grid-template-columns:1fr}.v7-location .v3-location-visual{min-height:240px}.v7-location .v3-location-info{padding:34px 24px}}
+
+/* V4.7 — história, metodologias, legibilidade e contato entre polos */
+.v8-history-timeline .v4-history-content{--timeline-inset:clamp(23px,3.5vw,48px);border-left:2px solid #b5d1eb;padding-left:var(--timeline-inset);position:relative;max-width:900px}
+.v8-history-timeline .v4-history-chapter{position:relative;border-top:0;border-bottom:1px solid #d7e4f0;margin:0;padding:30px 0 32px;min-width:0}
+.v8-history-timeline .v4-history-chapter::before{content:"";position:absolute;left:calc(-1 * var(--timeline-inset) - 8px);top:37px;width:12px;height:12px;border-radius:50%;background:#1768bb;border:3px solid #eaf4ff;box-shadow:0 0 0 1px #1768bb}
+.v8-history-timeline .v4-history-chapter>span{font-size:12px;letter-spacing:.075em}
+.v8-history-timeline .v4-history-chapter h3{font-size:clamp(25px,2.8vw,36px);letter-spacing:-.035em;overflow-wrap:break-word}
+.v8-history-timeline .v4-history-last{margin:26px 0 0}
+.v8-shared-contact{display:flex;align-items:center;justify-content:space-between;gap:24px;border:1px solid #bfd5eb;background:#eaf3ff;padding:clamp(22px,3.5vw,40px);margin-top:26px;color:#103b71}
+.v8-shared-contact strong{display:block;font-size:clamp(18px,2.2vw,24px);margin-bottom:6px;letter-spacing:-.025em}
+.v8-shared-contact p{font-size:14px;line-height:1.7;max-width:680px;margin:0;color:#435e7d}
+.v8-shared-contact a{color:#0d549f;font-size:13px;font-weight:800;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:5px;flex-shrink:0}
+.v8-contact-shared-note{font-size:13px;line-height:1.6;color:#d4e7fc;margin:16px 0 28px}
+.v3-location.v7-location .v3-location-visual strong{position:relative;white-space:normal;opacity:.92;font-weight:800;font-size:clamp(32px,4.5vw,60px);line-height:1.12;letter-spacing:-.04em;max-width:95%;padding:0 12px;overflow-wrap:break-word;z-index:2}
+.v3-location.v7-location .v3-location-visual small{line-height:1.5;max-width:min(95%,330px)}
+.v3-location.v7-location .v3-location-visual>span{letter-spacing:.16em;text-align:center}
+.v3-unit-strip.v7-unit-strip .v3-unit-strip-item{height:auto;min-width:0;max-width:100%}
+.v3-unit-strip.v7-unit-strip .v3-unit-strip-item strong{max-width:100%;overflow-wrap:break-word;white-space:normal;text-wrap:balance}
+:where(.hero-content,.about-copy,.v3-units-heading>div,.v6-home-partners-head>div,.v2-essay-grid>*,.experience-deep-top>*,.v3-contact-main>*,.v3-location-info,.v6-project-card,.v7-location-visual){min-width:0}
+:where(.hero h1,.page-inner-hero h1,.about-copy h2,.v3-units-heading h2,.v2-essay-grid h2,.experience-deep-top h2,.v6-home-partners h2,.v3-contact-top h2,.v8-history-timeline h3){overflow-wrap:break-word;word-break:normal;text-wrap:balance}
+.method-step-main{min-width:0}
+.method-step-main strong{overflow-wrap:break-word;line-height:1.2}
+.method-steps .method-step{padding-block:clamp(17px,1.8vw,25px)}
+.method-step:focus-visible{outline:3px solid #1870b7;outline-offset:4px}
+@media(max-width:990px){.v8-shared-contact{align-items:flex-start;flex-direction:column}.v8-shared-contact a{flex-shrink:1}.v8-history-timeline .v4-history-chapter p{font-size:16px}}
+@media(max-width:670px){
+ .page-inner-hero{height:auto;min-height:520px;padding:118px 0 65px}
+ .page-inner-hero h1{font-size:clamp(38px,9.4vw,59px);line-height:1.09;letter-spacing:-.055em;margin:34px 0 22px}
+ .page-inner-hero p{font-size:15px;line-height:1.75}
+ .v8-history-timeline .v4-history-content{--timeline-inset:22px;padding-left:var(--timeline-inset)}
+ .v8-history-timeline .v4-history-chapter{padding:24px 0 26px}
+ .v8-history-timeline .v4-history-chapter::before{top:31px}
+ .v8-history-timeline .v4-history-chapter>span{font-size:11px;letter-spacing:.04em}
+ .v8-history-timeline .v4-history-chapter h3{font-size:25px;line-height:1.2}
+ .v8-shared-contact{padding:23px 19px}
+ .v3-location.v7-location .v3-location-visual strong{font-size:clamp(32px,10vw,48px)}
+ .method-step-main strong{font-size:clamp(22px,6.7vw,28px)}
+ .method-steps .method-step{grid-template-columns:32px minmax(0,1fr) 20px;gap:10px}
+ .v3-unit-strip.v7-unit-strip .v3-unit-strip-item strong{font-size:clamp(30px,9vw,43px)}
+ .v6-project-card h3{font-size:clamp(23px,7vw,32px)}
+}

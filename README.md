@@ -73,3 +73,12 @@ Cinco fotografias conceituais otimizadas em AVIF sem logotipos gerados foram int
 - Possível expansão histórica adicional / "valhos" não esclarecido; não publicar como fato até confirmação.
 - E-mail não configurado; backend recebeu somente atualização da lista permitida de unidades para compatibilidade do formulário.
 - Logotipos e arquivos de identidade originais foram preservados. Prévia permanece com noindex.
+
+## V4.7 — consolidação pedagógica, história e acabamento
+- Metodologia com quinta etapa explícita: consolidação final orientada pelo professor na lousa e prática dos alunos na lousa ou computador, conforme a atividade.
+- Linha do tempo na página Nossa Escola com 2016 (fundação por Adriana), evolução pedagógica, expansão para Sorocaba e marco de 2026; anos intermediários permanecem sem datas inventadas.
+- Experiência Chroma diferencia-se da metodologia por projetos concretos e desenvolvimento comportamental, sem duplicar as etapas de ensino.
+- Itavuvu e Pannunzio (Polo Anhanguera) utilizam contato compartilhado. A página Unidades e a página Contato registram essa informação sem inventar telefone ou endereço.
+- Contato recebeu simplificação: retirada de duas chamadas redundantes de retorno ao início, mantendo o formulário (envio de e-mail ainda pendente), alternativas e rodapé.
+- Ajustes responsivos e de quebra de títulos, nomes das unidades, etapas da metodologia e marcos históricos para reduzir risco de texto cortado.
+- Fotos reais ainda não estão disponíveis entre os ativos do repositório. Imagens conceituais continuam identificadas como tais; nenhuma foto real foi fabricada ou usada sem confirmação.
