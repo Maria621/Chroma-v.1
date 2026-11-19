@@ -237,3 +237,25 @@
 .footer-compact a:focus-visible{outline:2px solid #1b66aa;outline-offset:4px;border-radius:2px}
 @media(max-width:950px){.footer-compact .footer-top{grid-template-columns:1fr;gap:24px}.footer-compact .footer-brand{display:flex;align-items:center;gap:20px}.footer-compact .footer-brand p{margin:0;max-width:340px}.footer-compact .footer-links{grid-template-columns:minmax(0,1.5fr) minmax(180px,.7fr)}}
 @media(max-width:580px){.footer.footer-compact{padding:28px 0 16px}.footer-compact .footer-brand{align-items:flex-start;gap:12px;flex-direction:column}.footer-compact .footer-brand p{font-size:12px}.footer-compact .footer-links{grid-template-columns:1fr;gap:20px}.footer-compact .footer-link-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 20px}.footer-compact .footer-bottom{display:grid;grid-template-columns:1fr auto;gap:8px 12px;font-size:10px}.footer-compact .footer-bottom a:last-child{grid-column:1/-1}.footer-compact .footer-rule{margin:22px 0 13px}}
+
+/* V4.6 — unidades nomeadas, detalhes da bolsa e parcerias */
+.v3-unit-strip.v7-unit-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.v7-unit-strip .v3-unit-strip-item{min-width:0;padding:clamp(22px,2.8vw,38px)}
+.v7-unit-strip .v3-unit-strip-item strong{font-size:clamp(27px,3vw,46px);line-height:1.18}
+.v7-location{min-height:425px}
+.v7-location .v3-location-info{padding:clamp(30px,4vw,65px)}
+.v7-location .v3-location-info h3{font-size:clamp(40px,5.2vw,74px)}
+.v7-location .v3-location-info address{font-style:normal;line-height:1.65}
+.v7-location-description{max-width:550px;font-size:15px;color:#4c6280;line-height:1.65}
+.v7-location .v3-location-visual{min-height:330px}
+.v7-location .v3-location-visual strong{font-size:clamp(31px,4.8vw,62px);line-height:1.14;letter-spacing:-.035em;text-align:center;overflow-wrap:anywhere}
+.v7-location .v3-location-visual small{max-width:290px;text-align:center}
+.v7-coverage-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:26px 0 22px}
+.v7-coverage-grid>div{padding:clamp(23px,3vw,36px);background:#fff;border:1px solid #cfdff0;color:#133865}
+.v7-coverage-grid h3{font-size:clamp(23px,2.5vw,34px);line-height:1.2;margin:4px 0 12px}
+.v7-coverage-grid p{font-size:15px;color:#506a83;line-height:1.75;margin:0}
+.v7-community-note{background:#e4effb;border-left:3px solid #2174b9;padding:24px 28px;margin-bottom:22px}
+.v7-community-note>span{display:block;font:800 11px var(--sans);letter-spacing:.15em;color:#205c95;margin-bottom:8px}
+.v7-community-note p{margin:0;max-width:860px;font-size:15px;line-height:1.75;color:#405a78}
+@media(max-width:960px){.v3-unit-strip.v7-unit-strip{grid-template-columns:1fr}.v7-unit-strip .v3-unit-strip-item{min-height:190px}.v7-location{grid-template-columns:1fr}}
+@media(max-width:700px){.v7-coverage-grid{grid-template-columns:1fr}.v7-location .v3-location-visual{min-height:240px}.v7-location .v3-location-info{padding:34px 24px}}

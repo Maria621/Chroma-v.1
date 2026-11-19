@@ -60,3 +60,16 @@ Cinco fotografias conceituais otimizadas em AVIF sem logotipos gerados foram int
 - Links de navegação em grade com duas colunas; aviso de prévia e política de privacidade preservados.
 - Layout adaptativo para desktop, tablet e celular.
 - Sem alterações em e-mail, backend ou logotipos.
+
+## Revisão institucional V4.6 — informações fornecidas em 19/11/2026
+- Marca oficial de comunicação: Instituto Chroma.
+- Fundação em Diadema, em 2016, por Adriana, com objetivo de ampliar oportunidades de crianças e adolescentes.
+- Evolução: da oferta inicial de poucas matérias à combinação de tecnologia, idiomas, formação profissional e práticas orientadas pelos professores.
+- Unidades atuais informadas: São Jorge (Diadema), Itavuvu (Sorocaba), Pannunzio / Polo Anhanguera (Sorocaba). Endereços completos, telefones e horários ainda aguardam confirmação. Endereços antigos não confirmados foram retirados.
+- Estrutura informada: salas com mais de 42 computadores, espaços de aula e de projetos. Não generalizar a quantidade a todas as unidades sem validação.
+- Diferenciais: atenção individual, prática assistida, desenvolvimento comportamental e reforço solicitado pelo aluno ou equipe.
+- Aluno Nota 10: projeto independente, sem fins lucrativos e administrado por outra empresa; Instituto Chroma é parceiro educacional. Nota 10 corresponde a bolsa de 100% dos cursos contemplados, com aulas, apostilas, exercícios e materiais; transporte é de responsabilidade da família. Elegibilidade, abrangência e descontos parciais dependem de regulamento.
+- Atividades informadas: apoio à OBA e ações em escolas públicas. Identidades dos parceiros, datas e registros ainda pendentes de validação.
+- Possível expansão histórica adicional / "valhos" não esclarecido; não publicar como fato até confirmação.
+- E-mail não configurado; backend recebeu somente atualização da lista permitida de unidades para compatibilidade do formulário.
+- Logotipos e arquivos de identidade originais foram preservados. Prévia permanece com noindex.
