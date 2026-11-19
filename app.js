@@ -24,6 +24,9 @@
     passive:true
   });
   onScroll();
+})();
+(()=> {
+  'use strict';
   const methods=[...document.querySelectorAll('.method-step')];
   function selectMethod(i) {
     methods.forEach((b,j)=> {
@@ -36,6 +39,9 @@
     });
   }
   methods.forEach((b,i)=>b.addEventListener('click',()=>selectMethod(i)));
+})();
+(()=> {
+  'use strict';
   const modal=document.getElementById('gallery-modal');
   const galleryTitles=['Ambientes de aprendizagem','Estrutura e tecnologia','Aprendizado em movimento','O cotidiano da Chroma'];
   const gallerySrc=['assets/visual-hero.avif','assets/visual-metodologia.avif','assets/visual-projetos.avif','assets/visual-acolhimento.avif'];

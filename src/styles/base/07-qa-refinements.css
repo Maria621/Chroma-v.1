@@ -1,0 +1,123 @@
+/* V3 post-QA readability refinements */
+.v3-form-grid .v3-field-label {
+  display:block;
+  color:#19375d;
+  font-weight:800;
+  line-height:1.4
+}
+.v3-form-grid .v3-field-label b {
+  color:#2366b8;
+  margin-left:3px
+}
+.v3-form-grid .v3-field-label small {
+  display:inline;
+  color:#6b7d92;
+  margin-left:4px
+}
+.v3-news-lead img {
+  height:auto;
+  aspect-ratio:1896/829;
+  object-fit:contain;
+  background:#081c43
+}
+.v3-feature-article-art {
+  display:flex;
+  align-items:center;
+  background:#081e43
+}
+.v3-feature-article-art img {
+  height:auto;
+  object-fit:contain;
+  max-height:none
+}
+.v3-news-article-image {
+  background:#061b42
+}
+.v3-news-article-image img {
+  height:auto;
+  aspect-ratio:1896/829;
+  object-fit:contain
+}
+.v3-coupon-article {
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  background:#082e65;
+  color:#fff;
+  align-items:center;
+  gap:0;
+  margin:22px 0 36px;
+  scroll-margin-top:95px
+}
+.v3-coupon-text {
+  padding:clamp(32px,4.5vw,76px)
+}
+.v3-coupon-text small {
+  font:800 10px var(--sans);
+  letter-spacing:.16em;
+  color:#c0d9fc
+}
+.v3-coupon-text h3 {
+  font:800 clamp(35px,3.5vw,54px)/1.1 var(--sans);
+  letter-spacing:-.06em;
+  margin:24px 0
+}
+.v3-coupon-text p {
+  font-size:14px;
+  color:#bbd3f0
+}
+.v3-coupon-text a {
+  font:800 12px var(--sans);
+  color:#ffe025
+}
+.v3-coupon-article>img {
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:contain
+}
+.v3-form-notice.is-error {
+  color:#a12e36!important
+}
+@media(max-width:960px) {
+  .v3-coupon-article {
+    grid-template-columns:1fr
+  }
+  .v3-coupon-article>img {
+    order:-1
+  }
+}
+@media(max-width:650px) {
+  .v3-news-lead img {
+    height:auto;
+    aspect-ratio:auto;
+    object-fit:contain
+  }
+  .v3-news-article-image img {
+    height:auto;
+    aspect-ratio:auto;
+    object-fit:contain
+  }
+  .v3-coupon-text {
+    padding:30px
+  }
+}
+.v3-experience-news-bridge img {
+  max-height:385px;
+  object-fit:cover;
+  object-position:55% center
+}
+.v3-news-bridge-link {
+  display:inline-flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:32px;
+  border-bottom:1px solid currentColor;
+  font:800 13px var(--sans);
+  margin-top:28px;
+  padding-bottom:11px;
+  color:#fff
+}
+.v3-news-bridge-link span {
+  color:#ffdf23;
+  font-size:18px
+}

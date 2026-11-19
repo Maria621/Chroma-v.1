@@ -1,6 +1,6 @@
 {
   "name": "instituto-chroma-institucional",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "private": true,
   "description": "Site institucional multipágina do Instituto Chroma, com validação estática e layouts compartilhados.",
   "engines": {
@@ -11,10 +11,12 @@
     "qa": "node scripts/qa.mjs",
     "check:layout": "node scripts/sync-layout.mjs --check",
     "sync:layout": "node scripts/sync-layout.mjs --write",
-    "check:js": "node --check app.js && node --check v31.js && node --check api/contato.js",
-    "validate": "npm run check:js && npm run check:layout && npm run check:design && npm test",
+    "check:js": "node --check app.js && node --check v31.js && node --check api/contato.js && node --check src/scripts/header.js && node --check src/scripts/methodology.js && node --check src/scripts/gallery.js && node --check src/scripts/contact.js && node --check src/scripts/navigation.js && node --check src/scripts/news-dialog.js",
+    "validate": "npm run check:assets && npm run check:js && npm run check:layout && npm run check:design && npm test",
     "check:preview": "node scripts/check-preview.mjs",
     "verify:deployment": "node scripts/verify-deployment.mjs",
-    "check:design": "node scripts/check-design-system.mjs"
+    "check:design": "node scripts/check-design-system.mjs",
+    "build:assets": "node scripts/build-front-end.mjs --write",
+    "check:assets": "node scripts/build-front-end.mjs --check"
   }
 }

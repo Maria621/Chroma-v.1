@@ -124,6 +124,16 @@ for (const page of pages) {
   }
 }
 
+const expectedScripts = ['app.js', 'v31.js'];
+for (const page of pages) {
+  const html = pageContents.get(page);
+  const scripts = [...html.matchAll(/<script\b[^>]*\bsrc="([^"]+)"[^>]*><\/script>/g)]
+    .map((match) => match[1]);
+  if (scripts.length !== 2 || scripts.some((src, i) => src !== expectedScripts[i])) {
+    issues.push(page + ": unexpected script ordering; expected app.js and v31.js");
+  }
+}
+
 for (const issue of checkSharedLayout()) {
   issues.push(issue);
 }

@@ -181,3 +181,11 @@ Não publicar como site definitivo antes da validação das pendências acima. O
 - `DESIGN_SYSTEM.md` registra tipografia, paleta, escalas e a necessidade de revisão de privacidade antes de publicar.
 - `npm run check:design` valida a configuração e faz parte de `npm run validate`.
 - A disponibilidade das fontes externas e o resultado visual precisam ser validados em navegador na prévia correspondente ao commit.
+
+## Etapa 3 — Arquitetura modular V5.2
+
+- CSS organizado em módulos de fonte com montagem determinística; os arquivos finais `style.css` e `v31.css` preservam a ordem exata de regras e a aparência.
+- JavaScript dividido em seis responsabilidades: cabeçalho, metodologia, galeria, contato, navegação e modal de notícias. As páginas continuam usando `app.js` e `v31.js` compilados.
+- Gerador sem dependências externas: `npm run build:assets` e verificador `npm run check:assets`.
+- `npm run validate` passa a impedir divergência entre código-fonte e arquivos compilados, além dos testes existentes.
+- O serviço de contato e o conteúdo institucional permanecem intocados; conferir `ARCHITECTURE.md` antes de editar os arquivos.

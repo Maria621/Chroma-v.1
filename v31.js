@@ -78,6 +78,9 @@
       dropdown.querySelector('a')?.focus()
     }
   });
+})();
+(()=> {
+  'use strict';
   const dialog=document.getElementById('chroma-image-dialog');
   if(dialog) {
     document.querySelectorAll('[data-view-image]').forEach(btn=>btn.addEventListener('click',()=> {
