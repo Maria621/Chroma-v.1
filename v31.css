@@ -1942,3 +1942,17 @@
     font-size:clamp(23px,7vw,32px)
   }
 }
+
+/* QA: controles da galeria com área mínima de toque e foco visível. */
+.gallery-modal .modal-bottom button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 20px;
+}
+.gallery-modal .modal-bottom button:focus-visible {
+  outline: 3px solid #1768bb;
+  outline-offset: 2px;
+}

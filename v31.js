@@ -35,7 +35,7 @@
       closeMobile(true)
     }
     else if(e.key==='Tab'&&!panel?.hidden) {
-      const items=[...panel.querySelectorAll('a[href]'),menu].filter(x=>x.getClientRects().length);
+      const items=[menu,...panel.querySelectorAll('a[href]')].filter(x=>x.getClientRects().length);
       const first=items[0],last=items[items.length-1];
       if(e.shiftKey&&document.activeElement===first) {
         e.preventDefault();

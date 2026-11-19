@@ -107,3 +107,43 @@ A revisão V4.8 corrigiu arquivos que concentravam centenas de tags ou declaraç
 
 ### Escopo e limites da V4.8
 Esta revisão foi **de formatação**, sem introduzir framework, pipeline de build, componentes novos, alteração de conteúdo ou configuração de e-mail. A consolidação arquitetural do CSS legado e a extração de componentes HTML compartilhados continuam como melhorias futuras e exigem testes visuais completos.
+
+
+## Auditoria de engenharia e UX — V4.9 (prévia)
+
+O HTML continua pré-renderizado para hospedagem estática no Vercel. Para eliminar o problema de manutenção de cabeçalhos/rodapés copiados manualmente, os componentes compartilhados têm agora **fontes canônicas**:
+
+- \`src/partials/header.html\`: cabeçalho e navegação. O script gera o estado visual da página atual e a variação escura/clara.
+- \`src/partials/footer.html\`: rodapé compacto, com o retorno ao início local ajustado conforme a página.
+- \`scripts/sync-layout.mjs\`: atualiza todas as páginas a partir das fontes canônicas ou verifica divergências sem modificar arquivos.
+- \`scripts/qa.mjs\`: verifica estrutura de HTML, IDs, links, âncoras, imagens, botões, componentes compartilhados e sintaxe de JS.
+- \`.github/workflows/quality.yml\`: executa QA automático na branch de revisão e em PRs destinados a \`main\`.
+
+### Fluxo de trabalho
+
+\`\`\`bash
+npm run sync:layout  # após editar um componente compartilhado
+npm run check:layout # confere se todas as páginas utilizam a fonte canônica
+npm run check:js
+npm test
+\`\`\`
+
+Este fluxo **não altera a renderização em tempo de execução**. Os arquivos HTML no repositório continuam prontos para deploy, sem bibliotecas extras no navegador.
+
+### Problemas corrigidos nesta rodada
+
+- Corrigido o item ativo do menu na página Aluno Nota 10.
+- Corrigida a ordem do ciclo de foco de teclado no menu mobile.
+- Corrigida a marcação da página Parcerias e da página Contato no cabeçalho.
+- Eliminado o carregamento de uma imagem com \`src=""\` no modal de Novidades.
+- Definidos \`type="button"\` para os controles da galeria da página inicial, com área de toque mínima.
+- Removida a alteração indevida do rótulo da metodologia a cada clique.
+- O botão do formulário inicia desativado até a confirmação de disponibilidade do serviço.
+
+### Pendências antes da homologação
+
+- Teste visual e funcional real em navegador (desktop, tablet e celular).
+- Revisão de acessibilidade com teclado e leitor de tela.
+- Consolidação gradual de \`style.css\` e \`v31.css\`, que ainda contêm regras históricas e sobreposições.
+- Fotografias institucionais reais, endereços e informações oficiais pendentes.
+- E-mail, tratamento de dados e política de privacidade definitiva (deixar para a última etapa).

@@ -34,8 +34,6 @@
       let plus=b.querySelector('.method-plus');
       if(plus)plus.textContent=i===j?'−':'+'
     });
-    const lab=document.getElementById('method-label');
-    if(lab)lab.textContent='COMO FUNCIONAM AS AULAS TECNOLÓGICAS'
   }
   methods.forEach((b,i)=>b.addEventListener('click',()=>selectMethod(i)));
   const modal=document.getElementById('gallery-modal');
