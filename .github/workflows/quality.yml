@@ -70,3 +70,36 @@ jobs:
             test-results/
           if-no-files-found: ignore
           retention-days: 7
+
+  performance:
+    name: Lighthouse — performance and accessibility
+    needs: validate
+    if: github.ref == 'refs/heads/revisao-institucional-v4'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    continue-on-error: true
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: "22"
+      - name: Verify system Chrome
+        run: google-chrome --version
+      - name: Install Lighthouse CLI
+        run: npm install --no-save --ignore-scripts --no-audit --no-fund lighthouse@13.6.0
+      - name: Audit local desktop and mobile experience
+        run: node scripts/run-performance-audit.mjs
+      - name: Save Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: chroma-lighthouse-${{ github.sha }}
+          path: qa-reports/
+          if-no-files-found: ignore
+          retention-days: 7

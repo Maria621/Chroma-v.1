@@ -221,3 +221,7 @@ Não publicar como site definitivo antes da validação das pendências acima. O
 ### CI de navegador — Chrome do GitHub Actions
 
 O job de interface da V5.6 utiliza agora o Chrome pré-instalado no executor Ubuntu 24.04, via `channel: "chrome"` do Playwright. Isso evita fazer download de um segundo navegador e reduz o tempo de preparação. Os testes continuam independentes da disponibilidade do Vercel.
+
+## Métricas adicionais
+
+O CI dispõe agora de uma auditoria Lighthouse local informativa, com Chrome do runner, relatórios JSON desktop/mobile e documentação em VISUAL_REVIEW.md. Não altera os arquivos publicados nem remove noindex.
