@@ -77,6 +77,12 @@ test("Contextual navigation styles are part of the generated CSS", () => {
   const source = read("src/styles/refinements/07-inner-navigation.css");
   const output = read("v31.css");
   assert.match(builder, /07-inner-navigation\.css/);
-  assert.ok(output.endsWith(source));
+  assert.ok(output.includes(source), "Navigation styles must be present in the CSS bundle");
+  const contrast = read("src/styles/refinements/08-contrast.css");
+  assert.ok(output.endsWith(contrast), "Accessibility refinements should be last");
+  assert.ok(
+    output.indexOf(source) < output.lastIndexOf(contrast),
+    "Keep the declared order of CSS modules",
+  );
   assert.match(source, /page-return-home:focus-visible/);
 });
