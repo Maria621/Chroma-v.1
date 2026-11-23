@@ -34,6 +34,7 @@ const sources = {
     "src/styles/refinements/05-units-accessibility.css",
     "src/styles/refinements/06-home-hero.css",
     "src/styles/refinements/07-inner-navigation.css",
+    "src/styles/refinements/08-contrast.css",
   ],
   "app.js": [
     "src/scripts/header.js",

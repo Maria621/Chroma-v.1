@@ -1,0 +1,45 @@
+/**
+ * V5.7 — contrasts and accessible decorative text.
+ * Precise overrides for Lighthouse-identified UI labels; visual identity stays blue/yellow.
+ */
+.marquee-band .marquee-copy {
+  color: #e9f3ff;
+}
+
+.v4-opportunity .v4-kicker,
+.v6-home-partners .v4-kicker {
+  color: #14589c;
+}
+
+.method-steps .method-step-n {
+  color: #52667e;
+}
+
+.gallery-disclaimer {
+  color: #4a5d75;
+}
+
+.v3-units-feature .v3-kicker {
+  color: #175ca7;
+}
+
+.v3-units-feature .v3-unit-note {
+  color: #4a6076;
+}
+
+.v3-news-side a p {
+  color: #425974;
+}
+
+.v3-news-signature small {
+  color: #3a5574;
+}
+
+.footer-compact .footer-brand p,
+.footer-compact .footer-contact p {
+  color: #475a70;
+}
+
+.footer-compact .footer-bottom span {
+  color: #45576c;
+}
