@@ -43,3 +43,13 @@
 .footer-compact .footer-bottom span {
   color: #45576c;
 }
+
+/* Lighthouse follow-up: legacy opacity and specificity prevented sufficient contrast. */
+.gallery-section .gallery-disclaimer {
+  color: #40566e;
+  opacity: 1;
+}
+
+.footer-compact .footer-top > .footer-brand p {
+  color: #384f68;
+}
