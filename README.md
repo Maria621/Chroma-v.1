@@ -217,3 +217,7 @@ Não publicar como site definitivo antes da validação das pendências acima. O
 - Testes reais em navegador (Playwright) adicionados ao GitHub Actions em job independente, com screenshots e relatórios como artefatos de QA.
 - `vercel.json` com cabeçalhos de segurança de leitura segura.
 - **Pendentes externamente:** fotografias oficiais, documentos e dados de unidades, política LGPD aprovada, credenciais de e-mail e Redis, domínio canônico, revisão visual de screenshots e autorização para publicação.
+
+### CI de navegador — Chrome do GitHub Actions
+
+O job de interface da V5.6 utiliza agora o Chrome pré-instalado no executor Ubuntu 24.04, via `channel: "chrome"` do Playwright. Isso evita fazer download de um segundo navegador e reduz o tempo de preparação. Os testes continuam independentes da disponibilidade do Vercel.

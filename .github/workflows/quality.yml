@@ -56,8 +56,8 @@ jobs:
           node-version: "22"
       - name: Install pinned browser test runner
         run: npm install --no-save --ignore-scripts --no-audit --no-fund @playwright/test@1.65.1
-      - name: Install Chromium for browser QA
-        run: npx playwright install --with-deps chromium
+      - name: Verify preinstalled system Chrome
+        run: google-chrome --version
       - name: Run desktop and mobile E2E
         run: npx playwright test --config=playwright.config.mjs
       - name: Save screenshots and browser reports
