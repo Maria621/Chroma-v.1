@@ -207,3 +207,13 @@ Não publicar como site definitivo antes da validação das pendências acima. O
 - Mensagem de contato alternativo na página de unidades enquanto o formulário não está disponível.
 - CSS no módulo `src/styles/refinements/07-inner-navigation.css`, gerado no bundle `v31.css`.
 - Testes adicionados: `npm run check:interior`. Consulte `INTERIOR_REVIEW.md`.
+
+## Etapas 6–8 — Consolidação institucional V5.6
+
+- Inventário de mídias e identificação explícita dos visuais criados digitalmente: `MEDIA_REGISTER.md`.
+- API de contato fail-closed, limitada por Redis Upstash e protegida por consentimento, configuração e validações: `CONTACT_SECURITY.md`. Sem variáveis aprovadas **nenhum e-mail é enviado**.
+- 11 testes de API de contato simulada, verificações de conteúdo e SEO incorporadas a `npm run validate`.
+- Preparação de 12 páginas com Open Graph e privacidade técnica revisada, ainda mantendo `noindex,nofollow` até aprovar o lançamento: `SEO_RELEASE.md`.
+- Testes reais em navegador (Playwright) adicionados ao GitHub Actions em job independente, com screenshots e relatórios como artefatos de QA.
+- `vercel.json` com cabeçalhos de segurança de leitura segura.
+- **Pendentes externamente:** fotografias oficiais, documentos e dados de unidades, política LGPD aprovada, credenciais de e-mail e Redis, domínio canônico, revisão visual de screenshots e autorização para publicação.

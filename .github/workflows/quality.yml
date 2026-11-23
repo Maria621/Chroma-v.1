@@ -36,3 +36,37 @@ jobs:
       - name: Prevent indexing of review previews
         if: github.ref == 'refs/heads/revisao-institucional-v4'
         run: npm run check:preview
+
+  browser:
+    name: Browser UX / accessibility smoke
+    needs: validate
+    if: github.ref == 'refs/heads/revisao-institucional-v4'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: "22"
+      - name: Install pinned browser test runner
+        run: npm install --no-save --ignore-scripts --no-audit --no-fund @playwright/test@1.65.1
+      - name: Install Chromium for browser QA
+        run: npx playwright install --with-deps chromium
+      - name: Run desktop and mobile E2E
+        run: npx playwright test --config=playwright.config.mjs
+      - name: Save screenshots and browser reports
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: chroma-browser-qa-${{ github.sha }}
+          path: |
+            playwright-report/
+            test-results/
+          if-no-files-found: ignore
+          retention-days: 7
