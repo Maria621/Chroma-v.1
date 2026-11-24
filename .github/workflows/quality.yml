@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - revisao-institucional-v4
+      - revisao-tecnica-v4-preservada
       - main
   pull_request:
     branches:
@@ -34,13 +35,13 @@ jobs:
       - name: Validate JavaScript, shared layout, pages and local assets
         run: npm run validate
       - name: Prevent indexing of review previews
-        if: github.ref == 'refs/heads/revisao-institucional-v4'
+        if: github.ref == 'refs/heads/revisao-institucional-v4' || github.ref == 'refs/heads/revisao-tecnica-v4-preservada'
         run: npm run check:preview
 
   browser:
     name: Browser UX / accessibility smoke
     needs: validate
-    if: github.ref == 'refs/heads/revisao-institucional-v4'
+    if: github.ref == 'refs/heads/revisao-institucional-v4' || github.ref == 'refs/heads/revisao-tecnica-v4-preservada'
     runs-on: ubuntu-24.04
     timeout-minutes: 25
     permissions:
@@ -74,7 +75,7 @@ jobs:
   performance:
     name: Lighthouse — performance and accessibility
     needs: validate
-    if: github.ref == 'refs/heads/revisao-institucional-v4'
+    if: github.ref == 'refs/heads/revisao-institucional-v4' || github.ref == 'refs/heads/revisao-tecnica-v4-preservada'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     continue-on-error: true

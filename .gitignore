@@ -2,3 +2,10 @@ node_modules/
 .env
 .env.local
 .DS_Store
+.vercel/
+.env.*
+!.env.example
+playwright-report/
+test-results/
+qa-reports/
+*.log

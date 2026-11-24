@@ -12,7 +12,7 @@
     "check:layout": "node scripts/sync-layout.mjs --check",
     "sync:layout": "node scripts/sync-layout.mjs --write",
     "check:js": "node --check app.js && node --check v31.js && node --check api/contato.js && node --check src/scripts/header.js && node --check src/scripts/methodology.js && node --check src/scripts/gallery.js && node --check src/scripts/contact.js && node --check src/scripts/navigation.js && node --check src/scripts/news-dialog.js",
-    "validate": "npm run check:assets && npm run check:js && npm run check:layout && npm run check:design && npm run check:hero && npm run check:interior && npm run check:contact && npm run check:seo && npm run check:content && npm run check:accessibility && npm test",
+    "validate": "npm run check:approved && npm run check:assets && npm run check:js && npm run check:layout && npm run check:design && npm run check:hero && npm run check:interior && npm run check:contact && npm run check:seo && npm run check:content && npm run check:accessibility && npm test",
     "check:preview": "node scripts/check-preview.mjs",
     "verify:deployment": "node scripts/verify-deployment.mjs",
     "check:design": "node scripts/check-design-system.mjs",
@@ -25,6 +25,7 @@
     "check:contact": "node --test tests/contact-api.test.cjs",
     "check:seo": "node scripts/check-seo.mjs",
     "check:content": "node scripts/check-credibility.mjs",
-    "check:accessibility": "node --test tests/accessibility-regression.test.mjs"
+    "check:accessibility": "node --test tests/accessibility-regression.test.mjs",
+    "check:approved": "node --test tests/approved-baseline.test.mjs"
   }
 }

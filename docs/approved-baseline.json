@@ -1,0 +1,230 @@
+{
+  "approvedCommit": "5692437bd423516a3ae4cd1c5c005bd9d2397429",
+  "algorithm": "git-blob-sha1",
+  "files": [
+    {
+      "path": "aluno-nota-10.html",
+      "sha": "ea62e88c2d58d73cb20eeafa7b7facec92027880"
+    },
+    {
+      "path": "api/contato.js",
+      "sha": "6e4043f64283c13c096c9ac1f89d8b8b303f5a2a"
+    },
+    {
+      "path": "app.js",
+      "sha": "e69f669da4e66a3de36f0dc6556b8222d0dee18f"
+    },
+    {
+      "path": "assets/aluno-nota-10.webp",
+      "sha": "d56a980dfd5bcb612fe9f5535416c1e94881cf01"
+    },
+    {
+      "path": "assets/banner-novidades.webp",
+      "sha": "b0815ac13bcf0f2062829582d54a1a6968806740"
+    },
+    {
+      "path": "assets/campanha-fim-de-ano.webp",
+      "sha": "b5c21ba53728a4fe1e48e229715c727249dc072b"
+    },
+    {
+      "path": "assets/chroma-aprendizagem.webp",
+      "sha": "b5cc6f11cc2d0c2558f0e230cc887bf6f099db96"
+    },
+    {
+      "path": "assets/consciência-negra.webp",
+      "sha": "f9a934302bb4c92e5c0c34ffcf865df5fa07aca3"
+    },
+    {
+      "path": "assets/interior-hero.webp",
+      "sha": "b5cc6f11cc2d0c2558f0e230cc887bf6f099db96"
+    },
+    {
+      "path": "assets/logo-instituto-chroma-branco.png",
+      "sha": "90923d411ec831b3131f64a980b8a7bd45dfc820"
+    },
+    {
+      "path": "assets/logo-instituto-chroma.png",
+      "sha": "5c4b75f47d7b99ca5676f7046af8d25fb3cffc7e"
+    },
+    {
+      "path": "assets/novidades-natal.webp",
+      "sha": "795c03575ad720dcdc9b8522716e8eb45a2082e1"
+    },
+    {
+      "path": "assets/presenca-premiada.webp",
+      "sha": "bff147ea14eb2dc7a5595c4d7464d2718c92194c"
+    },
+    {
+      "path": "assets/visual-acolhimento.avif",
+      "sha": "c60c2832008b78501c43d800450e3b94c165a246"
+    },
+    {
+      "path": "assets/visual-hero.avif",
+      "sha": "69b99162d450bf6ed8ecf2ad4bf85fb76b23f9a4"
+    },
+    {
+      "path": "assets/visual-mentoria.avif",
+      "sha": "9128270b7108509fdec4b9a57461b3659568cb1b"
+    },
+    {
+      "path": "assets/visual-metodologia.avif",
+      "sha": "4079fe1c8d598b3c4bc3474727fa37c9669476c5"
+    },
+    {
+      "path": "assets/visual-projetos.avif",
+      "sha": "1134474fb789c4fe9f323cda123a0031a1345739"
+    },
+    {
+      "path": "contato.html",
+      "sha": "1b6712889ee1fb2246662a53201807ccbc4f96c0"
+    },
+    {
+      "path": "estrutura.html",
+      "sha": "f2bf1123bd0dbd466a90189a254e169c4087c28a"
+    },
+    {
+      "path": "experiencia-chroma.html",
+      "sha": "22a5022b724efce501acefe0d3b91f95a76e2f8a"
+    },
+    {
+      "path": "index.html",
+      "sha": "9ac25ffd3bd51c13bfbe23653be217d87fa629ee"
+    },
+    {
+      "path": "metodologia.html",
+      "sha": "52fd76ae8e3870136a3e91f9cf5f3a2621f0adfe"
+    },
+    {
+      "path": "nossa-escola.html",
+      "sha": "23d95bbd2be9dd049cfa2915a811fc32748fa2f5"
+    },
+    {
+      "path": "nossa-essencia.html",
+      "sha": "6809ca2090a5fb507a16c065f5c6648495ebc56f"
+    },
+    {
+      "path": "novidades.html",
+      "sha": "7319b73b1dc6a11673775d4e835369122d14a637"
+    },
+    {
+      "path": "parcerias.html",
+      "sha": "7ee95d0f70a9b6b3334faebb0fbce1cd5468e677"
+    },
+    {
+      "path": "privacidade.html",
+      "sha": "e849f03fdcb8e015f8a880f90ef072144afc97c3"
+    },
+    {
+      "path": "src/partials/footer.html",
+      "sha": "59c344f434fbf711a4f12a6848a28dfa599a3de1"
+    },
+    {
+      "path": "src/partials/header.html",
+      "sha": "38ca4d6d9e3402e9758f1e7c8513d25020018980"
+    },
+    {
+      "path": "src/scripts/contact.js",
+      "sha": "c5a0911f7965fde6dc3cbb53e9537314f989290a"
+    },
+    {
+      "path": "src/scripts/gallery.js",
+      "sha": "75234f39ac154b0660628723c9aaf49b4ab7cec2"
+    },
+    {
+      "path": "src/scripts/header.js",
+      "sha": "63cb01586a1dd6474a26d0a4ef92224f76b0982a"
+    },
+    {
+      "path": "src/scripts/methodology.js",
+      "sha": "6633bc747efc2849965ceaadb660015083b37415"
+    },
+    {
+      "path": "src/scripts/navigation.js",
+      "sha": "6fe21631a801fd595150d8ad684a80aeb79e21aa"
+    },
+    {
+      "path": "src/scripts/news-dialog.js",
+      "sha": "5fdc570ae885233edb78617118f669475ab013fc"
+    },
+    {
+      "path": "src/styles/base/01-foundation.css",
+      "sha": "610662dbf358fd49603ba535ceebbc93ce4a3153"
+    },
+    {
+      "path": "src/styles/base/02-responsive.css",
+      "sha": "8558b74bf85127ff9652f9fe3aa22f72f373a3f8"
+    },
+    {
+      "path": "src/styles/base/03-identity.css",
+      "sha": "f666a8663ed533ea44f47e9a1238400520831d6d"
+    },
+    {
+      "path": "src/styles/base/04-interior-pages.css",
+      "sha": "f17915589a224d7390b877a9e58461095179d6cd"
+    },
+    {
+      "path": "src/styles/base/05-editorial.css",
+      "sha": "21ef35b6acd21bd4de7441b69ce122f62308f211"
+    },
+    {
+      "path": "src/styles/base/06-units-news.css",
+      "sha": "f9a251ee92b57021993c1db38b8a413a6cc75c88"
+    },
+    {
+      "path": "src/styles/base/07-qa-refinements.css",
+      "sha": "1342ccf15594959fb642270abd0b11b52332f332"
+    },
+    {
+      "path": "src/styles/refinements/01-navigation-campaigns.css",
+      "sha": "2bb098630a0e0c62406405a6ee742e1968ca7084"
+    },
+    {
+      "path": "src/styles/refinements/02-institutional-content.css",
+      "sha": "15a290296e5b0e2a61d9a3a4b249215d8bc62646"
+    },
+    {
+      "path": "src/styles/refinements/03-partnerships-hero.css",
+      "sha": "1ed8b26fd1e10bcf9c2afea4318b276fd32e6e44"
+    },
+    {
+      "path": "src/styles/refinements/04-footer.css",
+      "sha": "b1eb1bf537f6fc92c343a2c86b38c2e53d2e5a13"
+    },
+    {
+      "path": "src/styles/refinements/05-units-accessibility.css",
+      "sha": "44a1108a37fc177981a054b3a0d90120f6d69818"
+    },
+    {
+      "path": "src/styles/refinements/06-home-hero.css",
+      "sha": "31480d638a457601f92aaafa3a74ced90ab2cf2e"
+    },
+    {
+      "path": "src/styles/refinements/07-inner-navigation.css",
+      "sha": "a19278637a8332cb01aaeb94b24ab651cfe21c95"
+    },
+    {
+      "path": "src/styles/refinements/08-contrast.css",
+      "sha": "866888cef5b05cc471be574b53418133c322151c"
+    },
+    {
+      "path": "src/styles/tokens.css",
+      "sha": "9dd04a71ea5c8c01d944fa0b7359f2877f6096fa"
+    },
+    {
+      "path": "style.css",
+      "sha": "0f3a0e6e36547391d9745ac4defe4c2b5be2520a"
+    },
+    {
+      "path": "unidades.html",
+      "sha": "fc6bab99bf9440fe722bdf66c2e9b75a429e879e"
+    },
+    {
+      "path": "v31.css",
+      "sha": "6b9daa51ed5bf26333d131a957b2f6de782f8f1d"
+    },
+    {
+      "path": "v31.js",
+      "sha": "8663be54a672f60ee8e303b46d10bd03601f8bd1"
+    }
+  ]
+}
