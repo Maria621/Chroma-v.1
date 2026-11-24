@@ -27,7 +27,7 @@ test("Decorative marquee is hidden from assistive technologies", () => {
 test("CSS contrast corrections are maintained as an independent module", () => {
   const source = read("src/styles/refinements/08-contrast.css");
   const bundle = read("v31.css");
-  const build = read("scripts/build-front-end.mjs");
+  const build = read("scripts/front-end-manifest.mjs");
   assert.ok(bundle.endsWith(source));
   assert.match(build, /src\/styles\/refinements\/08-contrast\.css/);
   for (const selector of [

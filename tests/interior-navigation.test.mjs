@@ -73,7 +73,7 @@ test("Units have an honest active contact alternative", () => {
 });
 
 test("Contextual navigation styles are part of the generated CSS", () => {
-  const builder = read("scripts/build-front-end.mjs");
+  const builder = read("scripts/front-end-manifest.mjs");
   const source = read("src/styles/refinements/07-inner-navigation.css");
   const output = read("v31.css");
   assert.match(builder, /07-inner-navigation\.css/);

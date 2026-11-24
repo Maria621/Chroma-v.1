@@ -12,7 +12,7 @@ const root = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
 const read = (p) => readFileSync(path.join(root, p), "utf8");
 const html = read("index.html");
 const css = read("src/styles/refinements/06-home-hero.css");
-const builder = read("scripts/build-front-end.mjs");
+const builder = read("scripts/front-end-manifest.mjs");
 
 test("Hero keeps one clear heading, description and institutional CTA", () => {
   const hero = html.match(/<section class="hero" id="inicio">([\s\S]*?)<\/section>/)?.[1];
